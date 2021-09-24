@@ -1,0 +1,11 @@
+@EndUserText.label: 'cds role for Z02_C_BOOKINGTP'
+@MappingRole: true
+define role Z02_C_BOOKINGTP {
+    grant 
+        select
+            on
+                Z02_C_BOOKINGTP
+                    where
+                        (AirlineID) = aspect pfcg_auth(S_CARRID, CARRID, ACTVT = '03');
+                        
+}
